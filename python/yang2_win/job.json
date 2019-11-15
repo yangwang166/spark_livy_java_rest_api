@@ -1,0 +1,6 @@
+{
+  "file": "hdfs:///user/yang.wang/parking/examples.jar",
+  "className": "org.apache.spark.examples.SparkPi",
+  "proxyUser": "yang.wang",
+  "args": [100]
+}

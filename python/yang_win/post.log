@@ -1,0 +1,35 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.10.133:8999
+DEBUG:urllib3.connectionpool:http://10.0.10.133:8999 "POST /batches HTTP/1.1" 401 299
+DEBUG:requests_kerberos.kerberos_:handle_401(): Handling: 401
+ERROR:requests_kerberos.kerberos_:generate_request_header(): authGSSClientStep() failed:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\requests_kerberos\kerberos_.py", line 233, in generate_request_header
+    negotiate_resp_value)
+GSSError: SSPI: InitializeSecurityContext: The specified target is unknown or unreachable
+
+ERROR:requests_kerberos.kerberos_:SSPI: InitializeSecurityContext: The specified target is unknown or unreachable
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\requests_kerberos\kerberos_.py", line 233, in generate_request_header
+    negotiate_resp_value)
+GSSError: SSPI: InitializeSecurityContext: The specified target is unknown or unreachable
+
+DEBUG:requests_kerberos.kerberos_:handle_401(): returning <Response [401]>
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning <Response [401]>
+DEBUG:requests_kerberos.kerberos_:handle_response() has seen 0 401 responses
+DEBUG:requests_kerberos.kerberos_:handle_401(): Handling: 401
+ERROR:requests_kerberos.kerberos_:generate_request_header(): authGSSClientStep() failed:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\requests_kerberos\kerberos_.py", line 233, in generate_request_header
+    negotiate_resp_value)
+GSSError: SSPI: InitializeSecurityContext: The specified target is unknown or unreachable
+
+ERROR:requests_kerberos.kerberos_:SSPI: InitializeSecurityContext: The specified target is unknown or unreachable
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\requests_kerberos\kerberos_.py", line 233, in generate_request_header
+    negotiate_resp_value)
+GSSError: SSPI: InitializeSecurityContext: The specified target is unknown or unreachable
+
+DEBUG:requests_kerberos.kerberos_:handle_401(): returning <Response [401]>
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning <Response [401]>
+DEBUG:requests_kerberos.kerberos_:handle_response() has seen 1 401 responses
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning 401 <Response [401]>

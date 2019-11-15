@@ -1,0 +1,6 @@
+{
+  "file": "hdfs:///user/liveadmin/parking/examples.jar",
+  "className": "org.apache.spark.examples.SparkPi",
+  "proxyUser": "liveadmin",
+  "args": [100]
+}
