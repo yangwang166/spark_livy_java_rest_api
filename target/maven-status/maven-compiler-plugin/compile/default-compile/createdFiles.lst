@@ -1,4 +1,5 @@
 o9/sparklivy/poc/SparkRequest$SparkRequestBuilder.class
 o9/sparklivy/poc/SparkRequest.class
 o9/sparklivy/poc/SparkYarnRestClient.class
+o9/sparklivy/poc/SparkYarnRestClientWin.class
 o9/sparklivy/poc/SparkYarnRestClientSSL.class
