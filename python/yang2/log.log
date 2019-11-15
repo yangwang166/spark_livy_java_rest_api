@@ -1,0 +1,30 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.10.133:8999
+DEBUG:urllib3.connectionpool:http://10.0.10.133:8999 "POST /batches HTTP/1.1" 401 299
+DEBUG:requests_kerberos.kerberos_:handle_401(): Handling: 401
+DEBUG:requests_kerberos.kerberos_:authenticate_user(): Authorization header: Negotiate YIIChwYJKoZIhvcSAQICAQBuggJ2MIICcqADAgEFoQMCAQ6iBwMFACAAAACjggGBYYIBfTCCAXmgAwIBBaESGxBIRFBDTFVTVEVSLkxPQ0FMojgwNqADAgEDoS8wLRsESFRUUBslaXAtMTAtMC0xMC0xMzMuYW1lci5vOXNvbHV0aW9ucy5sb2NhbKOCASIwggEeoAMCARChAwIBAqKCARAEggEM9wiNsNVHN8VFduKMfIbDdrXiAb/3tPwk5exEYJZIvEXOuzgAUzLllV7edR0VN9fSUa39TBgZUK2vBkFHQBvCO0oMHgYRWQjgh/peaQNu7D3qQbSG8dvhSsJPMHKgDiYL+0LtvIXkqBqdWeC73fp2CvrVIu4dmnO+kt9ghdw1QF0oA/0n4+YpR2yVeTORCdwdOh46JeR1isW9Xu2xWR+HuscpgYIcNPC/bBnM/Lg8pYVwHyt572ZNC+1kks98K/gF0s5qEmUfrmH9N4dH4IsW1MiAdg9PU+CSRbY6BYIOjERPO9E634elwBwZyuLCS8gUuZENSsM2Nby+Z/UFFdJvuLXr+rPvN2TTQx9rjaSB1zCB1KADAgESooHMBIHJ6qtZrEegHFFZFuOZdSMmlnMBNkiCRbiX6rzA2HQ82pJE+rxFbntTRc22ML57KJaaFK/GFOKalJ3kk934wCn1XvCScNI7gqh+0fOc/gp6jzD2oJJpdXpba9GwAOAWwejbgab3JCTFfVS52cOGblkrpYr2HeTpV++OiFpzW+CImBGhgTYC+hT45iHc02JTxjQb1lS0GHmUC3nQylwQGVfq/SMX7Xw/7ExAITML7fsVrZhCGssDax9fMnBgQeybT51yMqPEzCswGeSQ
+DEBUG:urllib3.connectionpool:http://10.0.10.133:8999 "POST /batches HTTP/1.1" 201 None
+DEBUG:requests_kerberos.kerberos_:authenticate_user(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_401(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_response() has seen 0 401 responses
+DEBUG:requests_kerberos.kerberos_:handle_other(): Handling: 201
+DEBUG:requests_kerberos.kerberos_:handle_other(): Authenticating the server
+DEBUG:requests_kerberos.kerberos_:authenticate_server(): Authenticate header: YGoGCSqGSIb3EgECAgIAb1swWaADAgEFoQMCAQ+iTTBLoAMCARKiRARC05H+zU77qhvfPPYHvJ3i/3vUKKlxPlmhlgUl6nCO362I9Gpiqg+Z+QJHrnj9ED7qMR8YS+qrtboWZK51gFr780Bh
+DEBUG:requests_kerberos.kerberos_:authenticate_server(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_other(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning <Response [201]>
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.0.10.133:8999
+DEBUG:urllib3.connectionpool:http://10.0.10.133:8999 "POST /batches HTTP/1.1" 401 299
+DEBUG:requests_kerberos.kerberos_:handle_401(): Handling: 401
+DEBUG:requests_kerberos.kerberos_:authenticate_user(): Authorization header: Negotiate YIIChwYJKoZIhvcSAQICAQBuggJ2MIICcqADAgEFoQMCAQ6iBwMFACAAAACjggGBYYIBfTCCAXmgAwIBBaESGxBIRFBDTFVTVEVSLkxPQ0FMojgwNqADAgEDoS8wLRsESFRUUBslaXAtMTAtMC0xMC0xMzMuYW1lci5vOXNvbHV0aW9ucy5sb2NhbKOCASIwggEeoAMCARChAwIBAqKCARAEggEM9wiNsNVHN8VFduKMfIbDdrXiAb/3tPwk5exEYJZIvEXOuzgAUzLllV7edR0VN9fSUa39TBgZUK2vBkFHQBvCO0oMHgYRWQjgh/peaQNu7D3qQbSG8dvhSsJPMHKgDiYL+0LtvIXkqBqdWeC73fp2CvrVIu4dmnO+kt9ghdw1QF0oA/0n4+YpR2yVeTORCdwdOh46JeR1isW9Xu2xWR+HuscpgYIcNPC/bBnM/Lg8pYVwHyt572ZNC+1kks98K/gF0s5qEmUfrmH9N4dH4IsW1MiAdg9PU+CSRbY6BYIOjERPO9E634elwBwZyuLCS8gUuZENSsM2Nby+Z/UFFdJvuLXr+rPvN2TTQx9rjaSB1zCB1KADAgESooHMBIHJfNN/XDJNK3SF9LCoXfUJyQdvTixmMEqkLebF1kv/+X8nFR1yN+s03wtFpiF4fVj5gjjYz3sx8CxcykcW5WWp+qLWTXssRWj86g9OX4TpXGVHkED8RmNWQ30Nr4qoOHd88CSmp2htz/iiaG6zvVA6cQyxbQMLPJtzRdcbcz8NtH7IZ/dUWqKrwmfG9OUqgfU2NQn1LnA3R9dmcSyp7sroiVBjKdNsuPh4iyiqiGjGZGKyGhwKpvymVQ0qQDqruhKyC0OxINdndSnZ
+DEBUG:urllib3.connectionpool:http://10.0.10.133:8999 "POST /batches HTTP/1.1" 201 None
+DEBUG:requests_kerberos.kerberos_:authenticate_user(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_401(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_response() has seen 0 401 responses
+DEBUG:requests_kerberos.kerberos_:handle_other(): Handling: 201
+DEBUG:requests_kerberos.kerberos_:handle_other(): Authenticating the server
+DEBUG:requests_kerberos.kerberos_:authenticate_server(): Authenticate header: YGoGCSqGSIb3EgECAgIAb1swWaADAgEFoQMCAQ+iTTBLoAMCARKiRARCkbRHeKyxdjlAyI3hpGKnuqW03h28xBNmg9jc1qLbxgJ/NxWySh0CnIJCe1LakoJz32JcxGYS4J0JYX7tgAT8/rak
+DEBUG:requests_kerberos.kerberos_:authenticate_server(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_other(): returning <Response [201]>
+DEBUG:requests_kerberos.kerberos_:handle_response(): returning <Response [201]>
