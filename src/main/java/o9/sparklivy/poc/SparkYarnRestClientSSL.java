@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.security.KeyStore;
+import javax.net.ssl.SSLContext;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,9 +21,13 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.security.UserGroupInformation;
 
+import org.apache.http.conn.ssl.SSLContexts;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.HttpClients;
 
 @Slf4j
-public class SparkYarnRestClient {
+public class SparkYarnRestClientSSL {
 
     public static void main(String[] arguments) {
 
@@ -47,7 +53,35 @@ public class SparkYarnRestClient {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        RestTemplate kerberosRestTemplate = new KerberosRestTemplate(keytabLocation, kerberosUser);
+
+        HttpClient httpClient = null;
+        String keystoreFile = "/home/liveadmin/livytruststore.jks";
+        String password = "password1";
+
+        FileInputStream inputStream = null;
+        try {
+            inputStream = new FileInputStream(keystoreFile);
+            KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
+            trustStore.load(new FileInputStream(keystoreFile), password.toCharArray());
+            SSLContext sslContext = SSLContexts.custom()
+                    .loadTrustMaterial(trustStore)
+                    .build();
+            SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext);
+            httpClient = HttpClients.custom().setSSLSocketFactory(csf).build();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to create SSL HttpClient", e);
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    System.out.println("Failed to close keystore file: " + e);
+                }
+            }
+        }
+
+
+        RestTemplate kerberosRestTemplate = new KerberosRestTemplate(keytabLocation, kerberosUser, httpClient);
 
         List<String> classArgs = new ArrayList<String>();
         classArgs.add("100");
@@ -78,7 +112,7 @@ public class SparkYarnRestClient {
 
         System.out.println("Submitting Request to Livy");
 
-        String livyURL = "http://ip-10-0-10-133.amer.o9solutions.local:8999/batches";
+        String livyURL = "https://ip-10-0-10-133.amer.o9solutions.local:8999/batches";
 
         kerberosRestTemplate.postForObject(livyURL, sparkRequestJson, String.class);
 
