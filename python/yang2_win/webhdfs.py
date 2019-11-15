@@ -11,7 +11,7 @@ logger.setLevel(logging.DEBUG)
 
 method = 'GET'
 
-url = "http://ip-10-0-10-87.amer.o9solutions.local:50070/webhdfs/v1/user/liveadmin/parking/?op=LISTSTATUS"
+url = "http://ip-10-0-10-87.amer.xxxx.local:50070/webhdfs/v1/user/liveadmin/parking/?op=LISTSTATUS"
 
 session = requests.Session()
 response = session.request(

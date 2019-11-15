@@ -10,7 +10,7 @@ handler = logging.StreamHandler()
 logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
-API_ENDPOINT = 'https://ip-10-0-10-87.amer.o9solutions.local:8443/gateway/test/livy/v1/batches'
+API_ENDPOINT = 'https://hostname:8443/gateway/test/livy/v1/batches'
 data2 = open('job.json')
 json_data = json.load(data2)
 method = 'POST'
@@ -23,7 +23,7 @@ response = session.request(
     headers={'content-type': 'application/json'},
     data=json.dumps(json_data),
     verify=False,
-    auth=HTTPBasicAuth('liveadmin','cloudera')
+    auth=HTTPBasicAuth('username','password')
 )
 
 logger.debug(response.status_code)

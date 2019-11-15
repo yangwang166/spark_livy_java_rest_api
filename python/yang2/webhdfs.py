@@ -13,7 +13,7 @@ logger.setLevel(logging.DEBUG)
 method = 'GET'
 #url = 'https://nightly61x-2.nightly61x.root.hwx.site:20102/webhdfs/v1/user/hue?op=liststatus'
 
-url = "http://ip-10-0-10-87.amer.o9solutions.local:50070/webhdfs/v1/user/liveadmin/parking/?op=LISTSTATUS"
+url = "http://ip-10-0-10-87.amer.xxx.local:50070/webhdfs/v1/user/userssss/parking/?op=LISTSTATUS"
 
 session = requests.Session()
 response = session.request(
@@ -21,7 +21,7 @@ response = session.request(
     url=url,
     timeout=60,
     headers={'content-type': 'application/octet-stream'},
-    auth=HTTPKerberosAuth(principal="liveadmin@HDPCLUSTER.LOCAL")
+    auth=HTTPKerberosAuth(principal="usersss@HDPCLUSTER.LOCAL")
 )
 #print(response.text)
 

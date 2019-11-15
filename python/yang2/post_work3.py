@@ -13,6 +13,6 @@ headers = {
 data2 = open('job.json')
 json_data = json.load(data2)
 
-kerberos_auth = HTTPKerberosAuth(principal="liveadmin@HDPCLUSTER.LOCAL")
+kerberos_auth = HTTPKerberosAuth(principal="useraaa@HDPCLUSTER.LOCAL")
 r = requests.post(url=API_ENDPOINT, data=json.dumps(json_data), headers=headers, verify=False, auth=kerberos_auth)
 print(r.text)

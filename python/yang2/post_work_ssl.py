@@ -13,6 +13,6 @@ r = requests.post(url=API_ENDPOINT, data=json.dumps(json_data), headers=headers,
 
 
 #r = requests.post(url=API_ENDPOINT, data=json.dumps(json_data), headers=headers, verify=False, auth=HTTPKerberosAuth())
-#r = requests.post(url=API_ENDPOINT, data=json.dumps(json_data), headers=headers, verify=True, auth=HTTPKerberosAuth(), cert=['/home/liveadmin/yang2/livy.crt'])
+#r = requests.post(url=API_ENDPOINT, data=json.dumps(json_data), headers=headers, verify=True, auth=HTTPKerberosAuth(), cert=['/home/user/yang2/livy.crt'])
 
 print(r.text)

@@ -12,9 +12,9 @@ data2 = open('job.json')
 json_data = json.load(data2)
 
 with krbContext(using_keytab=True,
-        principal='liveadmin@HDPCLUSTER.LOCAL',
-        keytab_file='/etc/security/keytabs/liveadmin.keytab',
-        ccache_file='/home/liveadmin/yang/krb5cc_post'):
+        principal='useraaa@HDP.LOCAL',
+        keytab_file='/etc/security/keytabs/useraaa.keytab',
+        ccache_file='/home/useriaaa/yang/krb5cc_post'):
 
     r = requests.post(url=API_ENDPOINT, data=json.dumps(json_data), headers=headers, verify=False, auth=HTTPKerberosAuth())
     print(r)

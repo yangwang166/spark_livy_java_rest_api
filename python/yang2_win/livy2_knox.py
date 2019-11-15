@@ -10,7 +10,7 @@ handler = logging.StreamHandler()
 logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
-API_ENDPOINT = 'http://ip-10-0-10-184.amer.o9solutions.local:8999/batches'
+API_ENDPOINT = 'http://ip-10-0-10-184.amer.xxx.local:8999/batches'
 data2 = open('job.json')
 json_data = json.load(data2)
 method = 'POST'
@@ -23,7 +23,7 @@ response = session.request(
     headers={'content-type': 'application/json'},
     data=json.dumps(json_data),
     verify=False,
-    auth=HTTPKerberosAuth(principal="liveadmin@SBUX.TEST.LOCAL:cloudera")
+    auth=HTTPKerberosAuth(principal="liveadmin@xxx.TEST.LOCAL:cloudera")
 )
 
 logger.debug(response.status_code)
