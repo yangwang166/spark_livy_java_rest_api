@@ -33,7 +33,7 @@ public class SparkYarnRestClientWin {
 
         System.setProperty("java.security.auth.login.config", "true");
         System.setProperty("java.security.krb5.conf", "C:\\Windows\\krb5.ini");
-        System.setProperty("sun.security.krb5.debug", "true");
+        //System.setProperty("sun.security.krb5.debug", "true");
 
 
         String kerberosUser = "yang.wang@AMER.O9SOLUTIONS.LOCAL";
